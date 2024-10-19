@@ -48,7 +48,7 @@ function getWeatherDetails(name, lat, lon, country, state) {
             aqiCard.innerHTML= `
                 <div class="card-head">
                             <p>Air Quality index</p>
-                            <p class="air-index aqi-${data.list[0].main.temp}">${aqiList[data.list[0].main.aqi - 1]}</p>
+                            <p class="air-index aqi-${data.list[0].main.aqi}">${aqiList[data.list[0].main.aqi - 1]}</p>
                         </div>
                         <div class="air-indices">
                             <i class="bx bx-wind bx-lg"></i>
