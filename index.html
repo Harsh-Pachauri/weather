@@ -11,15 +11,19 @@
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-straight/css/uicons-bold-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>    <link rel="stylesheet" href="weather.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>    
+    <link rel="stylesheet" href="weather.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        </style>
 </head>
 
 <body>
     <div class="container">
         <div class="header">
-            <h2>Weather</h2>
+            <h1 class="logo">Weather</h1>
             <div class="weather-input">
-                <input type="text" name="city" id="city_input" placeholder="Enter city name">
+                <input type="text" name="city" id="city_input" class="hey" placeholder="Enter city name">
                 <button type="button" id="searchBtn">
                     <i class="fa-regular fa-search"></i>Search
                 </button>
@@ -140,7 +144,7 @@
                         </div>
 
                     </div>
-                    <div class="card new">
+                    <div id="new" class="card">
                         <h1>Made by Harsh Pachauri</h1>
                         <!-- <div class="card-head">
                             <p>Sunrise & Sunset</p>
