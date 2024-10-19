@@ -121,32 +121,6 @@ function getWeatherDetails(name, lat, lon, country, state) {
         windSpeedVal.innerHTML=`${speed}m/s`
         feelsVal.innerHTML=`${(feels_like - 273.15).toFixed(2)}&deg;C`
 
-    //     // console.log(sunrise,sunset)
-    //     sRiseTime=moment.utc(sunrise,'X').add(timezone,'seconds').format('hh:mm A'),
-    //     sSetTime=moment.utc(sunset,'X').add(timezone,'seconds').format('hh:mm A');
-    //     sunriseCard.innerHTML=`
-    //                     <div class="card-head">
-    //                         <p>Sunrise & Sunset</p>
-    //                     </div>
-    //                     <div class="sunrise-sunset">
-    //                         <div class="item">
-    //                             <div class="icon">
-    //                                 <i class="fi fi-bs-sunrise-alt isize" ></i>
-    //                             </div>
-    //                             <div>
-    //                                 <p>Sunrise</p>
-    //                                 <h2>${sRiseTime}</h2>
-    //                             </div>
-    //                             <div class="icon">
-    //                                 <i class="fi-bs-sunset isize" ></i>                                </div>
-    //                             <div>
-    //                                 <p>Sunset</p>
-    //                                 <h2>${sSetTime}</h2>
-    //                             </div>
-    //                         </div>
-    //                     </div>
-    //     `
-    // 
     }
     )
     .catch(() => {
@@ -157,23 +131,23 @@ function getWeatherDetails(name, lat, lon, country, state) {
         fetch(FORECAST_API_URL)
         .then(res=>res.json())
         .then(data=>{
-            let hourlyForecast=data.list;
-            hourlyForecastCard.innerHTML='';
-            for(i=0;i<=7;i++){
-                let hrForecastDate= new Date(hourlyForecast[i].dt_txt);
-                let hr=hrForecastDate.getHours();
-                let a='PM';
-                if(hr<12) a='AM';
-                if(hr==0) hr=12;
-                if(hr>12) hr=hr-12;
-                hourlyForecastCard.innerHTML += `
-                    <div class="card">
-                        <p>${hr}${a}</p>
-                        <img src="https://openweathermap.org/img/wn/${hourlyForecast[i].weather[0].icon}.png" alt="">
-                        <p>${(hourlyForecast[i].main.temp - 273.15).toFixed(2)}&deg;C</p>
-                    </div>
-                `
-            }
+            // let hourlyForecast=data.list;
+            // hourlyForecastCard.innerHTML='';
+            // for(i=0;i<=7;i++){
+            //     let hrForecastDate= new Date(hourlyForecast[i].dt_txt);
+            //     let hr=hrForecastDate.getHours();
+            //     let a='PM';
+            //     if(hr<12) a='AM';
+            //     if(hr==0) hr=12;
+            //     if(hr>12) hr=hr-12;
+            //     hourlyForecastCard.innerHTML += `
+            //         <div class="card">
+            //             <p>${hr}${a}</p>
+            //             <img src="https://openweathermap.org/img/wn/${hourlyForecast[i].weather[0].icon}.png" alt="">
+            //             <p>${(hourlyForecast[i].main.temp - 273.15).toFixed(2)}&deg;C</p>
+            //         </div>
+            //     `
+            // }
 
 
             let uniqueForecastDays=[];
